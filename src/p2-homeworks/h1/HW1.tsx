@@ -45,9 +45,10 @@ function HW1() {
                     name={alternativeMessageData.name}
                     message={alternativeMessageData.message}
                     time={alternativeMessageData.time}/>}/>
-
             </Routes>
+            <hr/>
         </BrowserRouter>
+
     )
 
 }

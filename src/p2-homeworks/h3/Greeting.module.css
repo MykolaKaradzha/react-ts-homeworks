@@ -1,7 +1,12 @@
 .someClass {
-
+    border: 1px solid #038603
 }
 
 .error {
-    border: 1px solid red;
+    border: 1px solid #e83939;
+}
+
+.button {
+    color: #f3f1f1;
+    background: #22b92e;
 }

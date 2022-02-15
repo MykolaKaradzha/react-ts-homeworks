@@ -3,6 +3,7 @@
   color: #ffffff;
   background-color: #679bfc;
 }
+
 .deleteButton {
   margin: 10px;
 }
@@ -10,9 +11,13 @@
 .priority {
   padding: 20px;
 }
+
 thead > tr {
   color: #ff033d;
 }
+
 tbody > tr > td:first-child {
   color: #f3cd1c;
 }
+
+/*# sourceMappingURL=Affairs.module.css.map */
