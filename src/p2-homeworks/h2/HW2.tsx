@@ -21,16 +21,18 @@ const defaultAffairs: Array<AffairType> = [
 
 // pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType):Array<AffairType> => {
-    switch (filter) {
-        case 'all':
-            return affairs;
-        case 'high':
-            return affairs.filter(affair => affair.priority === 'high')
-        case 'middle':
-            return affairs.filter(affair => affair.priority === 'middle')
-        case 'low':
-            return affairs.filter(affair => affair.priority === 'low')
-    }
+    return (filter === 'all') ? affairs : affairs.filter(affair => affair.priority === filter)
+    // switch (filter) {
+    //     case 'all':
+    //         return affairs;
+    //     case 'high':
+    //         return affairs.filter(affair => affair.priority === 'high')
+    //     case 'middle':
+    //         return affairs.filter(affair => affair.priority === 'middle')
+    //     case 'low':
+    //         return affairs.filter(affair => affair.priority === 'low')
+    // }
+
 }
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
     return affairs.filter(affair => affair._id !== _id)
