@@ -26,28 +26,22 @@ const alternativeMessageData:messagesType = {
 
 function HW1() {
     return (
-        <BrowserRouter>
+        <>
             <hr/>
             homeworks 1
-            <div>
-                <button><NavLink to="/message">Message</NavLink></button>
-                <button><NavLink to="/alternative_message">AlternativeMessage</NavLink></button>
-            </div>
-
-            <Routes>
-                <Route path="/message" element={<Message
+                <Message
                     avatar={messageData.avatar}
                     name={messageData.name}
                     message={messageData.message}
-                    time={messageData.time}/>}/>
-                <Route path="/alternative_message" element={<AlternativeMessage
-                    avatar={alternativeMessageData.avatar}
-                    name={alternativeMessageData.name}
-                    message={alternativeMessageData.message}
-                    time={alternativeMessageData.time}/>}/>
-            </Routes>
+                    time={messageData.time}/>
+                {/*<AlternativeMessage*/}
+                {/*    avatar={alternativeMessageData.avatar}*/}
+                {/*    name={alternativeMessageData.name}*/}
+                {/*    message={alternativeMessageData.message}*/}
+                {/*    time={alternativeMessageData.time}/>*/}
+
             <hr/>
-        </BrowserRouter>    )
+        </>    )
 
 }
 

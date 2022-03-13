@@ -2,6 +2,8 @@ import React from 'react'
 import s from "./Message.module.css"
 import {messagesType} from "./HW1";
 
+
+
 function Message(props: messagesType) {
     return (
         <div className={s.container}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
-import styles from "./Affairs.module.css"
+import s from "./Affairs.module.css"
 
 
 
@@ -39,10 +39,10 @@ function Affairs(props: AffairsPropsType) {
             </table>
 
 
-            <button className={styles.filterButton} onClick={setAll}>All</button>
-            <button className={styles.filterButton} onClick={setHigh}>High</button>
-            <button className={styles.filterButton} onClick={setMiddle}>Middle</button>
-            <button className={styles.filterButton} onClick={setLow}>Low</button>
+            <button className={s.filterButton} onClick={setAll}>All</button>
+            <button className={s.filterButton} onClick={setHigh}>High</button>
+            <button className={s.filterButton} onClick={setMiddle}>Middle</button>
+            <button className={s.filterButton} onClick={setLow}>Low</button>
         </div>
     )
 }
