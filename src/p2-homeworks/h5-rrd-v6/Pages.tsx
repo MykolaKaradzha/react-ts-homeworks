@@ -4,6 +4,7 @@ import PreJunior from "./pages/PreJunior";
 import Error404 from "./pages/Error404";
 import {Junior} from "./pages/Junior";
 import {JuniorPlus} from "./pages/JuniorPlus";
+import {Box} from "@mui/material";
 
 
 export const PATH = {
@@ -14,7 +15,7 @@ export const PATH = {
 
 function Pages() {
     return (
-        <div>
+        <>
             {/*Routes выбирает первый подходящий роут*/}
             <Routes>
                 <Route path={'/'} element={<Navigate to={PATH.PRE_JUNIOR}/>}/>
@@ -30,7 +31,7 @@ function Pages() {
                 <Route path={'/*'} element={<Error404/>}/>
             </Routes>
 
-        </div>
+        </>
     )
 }
 

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
+import {Typography} from "@mui/material";
 
 // types
 export type AffairPriorityType = 'high'|'middle'|'low'
@@ -47,8 +48,7 @@ function HW2() {
 
     return (
         <div>
-            <hr/>
-            homeworks 2
+            <Typography variant={"h5"} align={'center'}>Homeworks 2</Typography>
 
             {/*should work (должно работать)*/}
             <Affairs
@@ -57,10 +57,9 @@ function HW2() {
                 deleteAffairCallback={deleteAffairCallback}
             />
 
-            <hr/>
+
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
-            <hr/>
         </div>
     )
 }

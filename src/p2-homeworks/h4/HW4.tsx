@@ -4,6 +4,7 @@ import s from './HW4.module.css'
 import SuperButton from './common/c2-SuperButton/SuperButton'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 import AlternativeSuperButton from "./common/c2-SuperButton/AlternativeSuperButton";
+import {Divider, Paper, Typography} from "@mui/material";
 
 function HW4() {
     const [text, setText] = useState<string>('')
@@ -22,16 +23,14 @@ function HW4() {
 
     return (
         <div>
-            <hr/>
-            homeworks 4
-
+            <Typography variant={"h5"} align={'center'}>Homeworks 4</Typography>
             <div className={s.column}>
                 <SuperInputText
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    //spanClassName={s.testSpanError}
+                    spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
@@ -68,12 +67,10 @@ function HW4() {
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
 
-            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperInputText/>*/}
             {/*<AlternativeSuperButton/>*/}
             {/*<AlternativeSuperCheckbox/>*/}
-            <hr/>
         </div>
     )
 }

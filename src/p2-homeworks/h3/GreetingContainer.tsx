@@ -27,7 +27,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             setError('')
             alert(`Hello ${name}!`) // need to fix
         } else {
-            setError("Common, bro, enter your name!")
+            setError("Enter your name, bro!")
         }
     }
 

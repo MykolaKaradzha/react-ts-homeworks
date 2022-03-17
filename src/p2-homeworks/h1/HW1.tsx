@@ -1,7 +1,8 @@
 import React from 'react'
 import Message from "./Message";
 import AlternativeMessage from "./AlternativeMessage";
-import {BrowserRouter, NavLink, Route, Routes} from 'react-router-dom';
+import {Typography} from "@mui/material";
+
 
 export type messagesType = {
     avatar: string
@@ -27,8 +28,7 @@ const alternativeMessageData:messagesType = {
 function HW1() {
     return (
         <>
-            <hr/>
-            homeworks 1
+             <Typography variant={"h5"} align={'center'}>Homeworks 1</Typography>
                 <Message
                     avatar={messageData.avatar}
                     name={messageData.name}
@@ -40,7 +40,6 @@ function HW1() {
                 {/*    message={alternativeMessageData.message}*/}
                 {/*    time={alternativeMessageData.time}/>*/}
 
-            <hr/>
         </>    )
 
 }

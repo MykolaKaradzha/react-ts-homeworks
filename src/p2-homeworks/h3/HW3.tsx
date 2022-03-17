@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import GreetingContainer from './GreetingContainer'
 import {v1} from "uuid";
+import {Typography} from "@mui/material";
 
 // types
 export type UserType = {
@@ -18,16 +19,14 @@ function HW3() {
 
     return (
         <div>
-            <hr/>
-            homeworks 3
-
+            <Typography variant={"h5"} align={'center'}>Homeworks 3</Typography>
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>
 
-            <hr/>
+
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeGreeting/>*/}
-            <hr/>
+
         </div>
     )
 }
