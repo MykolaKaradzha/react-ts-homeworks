@@ -1,6 +1,7 @@
 import React from 'react'
 import {AffairType} from "./HW2";
-import styles from "./Affairs.module.css"
+import { IconButton, TableCell, TableRow} from "@mui/material";
+import {Delete} from "@mui/icons-material";
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -9,16 +10,21 @@ type AffairPropsType = {
 }
 
 function Affair(props: AffairPropsType) {
-    const deleteCallback = () => {props.deleteAffairCallback(props.affair._id)}// need to fix
+    const deleteCallback = () => {
+        props.deleteAffairCallback(props.affair._id)
+    }// need to fix
 
     return (
         <>
-            <tr>
-                <td className={styles.name}>{props.affair.name}</td>
-                <td className={styles.priority}>{props.affair.priority}</td>
-                <td><button className={styles.deleteButton} onClick={deleteCallback}>X</button></td>
-            </tr>
-
+            <TableRow>
+                <TableCell>{props.affair.name}</TableCell>
+                <TableCell>{props.affair.priority}</TableCell>
+                <TableCell>
+                    <IconButton onClick={deleteCallback} color={'error'}>
+                        <Delete/>
+                    </IconButton>
+                </TableCell>
+            </TableRow>
         </>
     )
 }
