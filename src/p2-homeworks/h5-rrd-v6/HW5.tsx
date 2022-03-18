@@ -8,7 +8,7 @@ import {createTheme, ThemeProvider} from "@mui/material";
 function HW5() {
     const [isOpen, setOpen] = useState<boolean>(false)
 
-    const [isNightModeOn, setNightModeOn] = useState<boolean>(false)
+    const [isNightModeOn, setNightModeOn] = useState<boolean>(true)
     const closeMenu = () => setOpen(false)
     const openMenu = () => setOpen(true)
     const lightTheme = createTheme({

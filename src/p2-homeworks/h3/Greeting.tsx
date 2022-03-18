@@ -20,7 +20,7 @@ const Greeting: React.FC<GreetingPropsType> = (
     return (
         <div>
             <input value={name} onChange={setNameCallback} className={inputClass} placeholder={"Please, enter your name"}/>
-            <IconButton onClick={addUser} color={"secondary"} size={"large"}>
+            <IconButton onClick={addUser} color={"error"} size={"large"}>
                 <Badge badgeContent={totalUsers} color="success"
                        sx={{ "& .MuiBadge-badge": { fontSize: 10, height: 15, minWidth: 15 } }}>
                     <AddBox/>

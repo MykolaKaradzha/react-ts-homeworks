@@ -4,7 +4,7 @@ import PreJunior from "./pages/PreJunior";
 import Error404 from "./pages/Error404";
 import {Junior} from "./pages/Junior";
 import {JuniorPlus} from "./pages/JuniorPlus";
-import {Box} from "@mui/material";
+
 
 
 export const PATH = {

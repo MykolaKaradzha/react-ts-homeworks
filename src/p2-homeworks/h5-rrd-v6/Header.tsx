@@ -28,7 +28,7 @@ type HeaderPropsType = {
 const Header:React.FC<HeaderPropsType> = ({openMenu, setNightModeOn, isNightModeOn}) => {
 
     return (
-        <AppBar position="static" color={'primary'} sx={{mb:3}}>
+        <AppBar position="sticky" color={'primary'} sx={{mb:3}}>
             <Toolbar>
                 <IconButton
                     size="large"

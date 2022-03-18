@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import GreetingContainer from './GreetingContainer'
 import {v1} from "uuid";
-import {Typography} from "@mui/material";
+import {Stack, Typography} from "@mui/material";
 
 // types
 export type UserType = {
