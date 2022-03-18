@@ -5,13 +5,14 @@ import HW3 from '../../h3/HW3'
 import HW4 from '../../h4/HW4'
 import {Container, Grid, Paper} from "@mui/material";
 import {v1} from "uuid";
+import HW6 from "../../h6/HW6";
 
 function PreJunior() {
-    const homeworks = [<HW1/>, <HW2/>, <HW3/>, <HW4/>]
+    const homeworks = [<HW1/>, <HW2/>, <HW3/>, <HW4/>, <HW6/>]
 
     return (
         <Container>
-            <Grid container spacing={3}>
+            <Grid container spacing={10} justifyContent="center">
                 {homeworks.map(homework => {
                     const newID = v1()
                     return <Grid item key={newID}>

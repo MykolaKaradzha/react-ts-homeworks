@@ -1,6 +1,6 @@
 import React from 'react'
 import {AffairType} from "./HW2";
-import { IconButton, TableCell, TableRow} from "@mui/material";
+import {IconButton, TableCell, TableRow, Typography} from "@mui/material";
 import {Delete} from "@mui/icons-material";
 
 type AffairPropsType = {
@@ -17,8 +17,8 @@ function Affair(props: AffairPropsType) {
     return (
         <>
             <TableRow>
-                <TableCell>{props.affair.name}</TableCell>
-                <TableCell>{props.affair.priority}</TableCell>
+                <TableCell><Typography variant={"body1"}>{props.affair.name}</Typography></TableCell>
+                <TableCell><Typography variant={"body1"}>{props.affair.priority}</Typography></TableCell>
                 <TableCell>
                     <IconButton onClick={deleteCallback} color={'error'}>
                         <Delete/>

@@ -5,8 +5,12 @@
 .error {
     border: 1px solid #e83939;
 }
+.errorDiv {
+    color: #e83939;
+}
 
 .button {
     color: #f3f1f1;
     background: #22b92e;
+    margin: 5px
 }

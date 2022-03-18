@@ -2,7 +2,17 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 
-import {Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
+import {
+    Button,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Typography
+} from "@mui/material";
 
 
 type AffairsPropsType = { // need to fix any
@@ -45,9 +55,9 @@ const Affairs:React.FC<AffairsPropsType> = ({data, setFilter, deleteAffairCallba
                 <Table sx={{minWidth: 70}}>
                     <TableHead>
                     <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Priority</TableCell>
-                        <TableCell>Delete</TableCell>
+                        <TableCell>NAME</TableCell>
+                        <TableCell>PRIORITY</TableCell>
+                        <TableCell>DELETE</TableCell>
                     </TableRow>
                     </TableHead>
                     <TableBody>{mappedAffairs}</TableBody>

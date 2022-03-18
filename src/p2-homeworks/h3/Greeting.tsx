@@ -1,5 +1,7 @@
 import React, {ChangeEvent} from 'react'
 import s from './Greeting.module.css'
+import {Alert, Badge, Button, IconButton, Snackbar} from "@mui/material";
+import {AddBox, AddBoxTwoTone} from "@mui/icons-material";
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -18,9 +20,13 @@ const Greeting: React.FC<GreetingPropsType> = (
     return (
         <div>
             <input value={name} onChange={setNameCallback} className={inputClass} placeholder={"Please, enter your name"}/>
-            <button onClick={addUser} className={s.button}>add</button>
-            <span>{totalUsers}</span>
-            <div>{error}</div>
+            <IconButton onClick={addUser} color={"secondary"} size={"large"}>
+                <Badge badgeContent={totalUsers} color="success"
+                       sx={{ "& .MuiBadge-badge": { fontSize: 10, height: 15, minWidth: 15 } }}>
+                    <AddBox/>
+                </Badge>
+            </IconButton>
+            <div className={s.errorDiv}>{error}</div>
         </div>
     )
 }
