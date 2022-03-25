@@ -1,6 +1,7 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 import {
+    Divider,
     Drawer,
     List,
     ListItem,
@@ -30,11 +31,13 @@ export const Navigation: React.FC<NavigationPropsType> = ({open, closeMenu}) => 
                         <ListItemText primary="Pre-Junior"/>
                     </ListItemButton>
                 </ListItem>
+                <Divider/>
                 <ListItem disablePadding>
                     <ListItemButton onClick={() => navigate('/junior', { replace: true })}>
                         <ListItemText primary="Junior"/>
                     </ListItemButton>
                 </ListItem>
+                <Divider/>
                 <ListItem disablePadding>
                     <ListItemButton onClick={() => navigate('/junior-plus', { replace: true })}>
                         <ListItemText primary="Junior+"/>

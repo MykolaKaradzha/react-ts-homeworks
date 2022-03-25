@@ -1,17 +1,27 @@
 import React from 'react'
+import {Container, Grid, Paper, Stack} from "@mui/material";
+import {v1} from "uuid";
+import HW7 from "../../h7/HW7";
 
 
 export function Junior() {
-    return (
-        <div>
-            Junior
-            {/*<HW7/>*/}
-            {/*<HW8/>*/}
-            {/*<HW9/>*/}
-            {/*<HW10/>*/}
-            {/*<HW11/>*/}
+    const homeworks = [<HW7/>]
 
-        </div>
+    return (
+        <Container>
+            <Grid container spacing={10} justifyContent="center">
+                {homeworks.map(homework => {
+                    const newID = v1()
+                    return <Grid item key={newID}>
+                        <Paper sx={{padding: 1, minHeight: 200, minWidth: 200}} elevation={6}
+                               component={Stack} direction="column" justifyContent="center" alignItems="center">
+                            {homework}
+                        </Paper>
+                    </Grid>
+                })}
+            </Grid>
+
+        </Container>
     )
 }
 

@@ -13,7 +13,7 @@ function HW5() {
     const openMenu = () => setOpen(true)
     const lightTheme = createTheme({
         palette: {
-            mode: 'light'
+            mode: 'light',
         }
     })
     const darkTheme = createTheme({

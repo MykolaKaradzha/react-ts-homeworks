@@ -28,7 +28,7 @@ type HeaderPropsType = {
 const Header:React.FC<HeaderPropsType> = ({openMenu, setNightModeOn, isNightModeOn}) => {
 
     return (
-        <AppBar position="sticky" color={'primary'} sx={{mb:3}}>
+        <AppBar position="static" color={'primary'} sx={{mb:3}}>
             <Toolbar>
                 <IconButton
                     size="large"
@@ -40,7 +40,7 @@ const Header:React.FC<HeaderPropsType> = ({openMenu, setNightModeOn, isNightMode
                 >
                     <Menu />
                 </IconButton>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                <Typography variant={'body1'} component={'div'} sx={{ flexGrow: 1 }}>
                     Level
                 </Typography>
                 <NightSwitch setNightModeOn={setNightModeOn} isNightModeOn={isNightModeOn}/>

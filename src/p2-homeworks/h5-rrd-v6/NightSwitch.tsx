@@ -1,4 +1,4 @@
-import React, {ChangeEvent, SyntheticEvent, useState} from 'react';
+import React, { SyntheticEvent } from 'react';
 import {FormControlLabel, FormGroup, styled, Switch} from "@mui/material";
 
 
