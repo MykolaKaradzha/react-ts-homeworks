@@ -13,7 +13,7 @@ function HW7() {
 
     return (<>
 
-            <Typography variant={"h5"} align={'center'}>Homeworks 7</Typography>
+            <Typography variant={"h5"} align={'center'} sx={{paddingBottom:2}}>Homeworks 7</Typography>
                 <SuperSelect
                     options={arr}
                     value={value}

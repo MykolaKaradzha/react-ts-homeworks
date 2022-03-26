@@ -1,7 +1,8 @@
 import React from 'react'
-import {homeWorkReducer} from '../homeWorkReducer'
+import {checkListAC, homeWorkReducer, sortListDownAC, sortListUpAC} from '../homeWorkReducer'
+import {UserType} from "../../HW8";
 
-let initialState: any[] // need to fix any
+let initialState: UserType[] // need to fix any
 
 beforeEach(() => {
     initialState = [
@@ -15,18 +16,27 @@ beforeEach(() => {
 })
 
 test('sort name up', () => {
-    const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'up'})
+    const newState = homeWorkReducer(initialState, sortListUpAC())
 
     console.log(newState)
-    // expect(...).toBe(...)
+    expect(newState.findIndex(member => member.name === 'Александр')).toBe(0)
+    expect(newState.findIndex(member => member.name === 'Кот')).toBe(initialState.length - 1)
 })
 test('sort name down', () => {
-    const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'down'})
-
+    const newState = homeWorkReducer(initialState, sortListDownAC())
+    console.log(newState);
+    expect(newState.findIndex(member => member.name === 'Александр')).toBe(initialState.length - 1)
+    expect(newState.findIndex(member => member.name === 'Кот')).toBe(0)
 
 })
 test('check age 18', () => {
-    const newState = homeWorkReducer(initialState, {type: 'check', payload: 18})
+    const newState = homeWorkReducer(initialState, checkListAC())
+
+    console.log(newState);
+    console.log(newState.length);
+
+    expect(newState.length).toBe(4);
+    expect(newState.filter(member => member.age < 18)).toStrictEqual([]);
 
 
 })

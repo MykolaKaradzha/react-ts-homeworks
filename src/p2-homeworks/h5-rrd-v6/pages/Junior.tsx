@@ -2,10 +2,11 @@ import React from 'react'
 import {Container, Grid, Paper, Stack} from "@mui/material";
 import {v1} from "uuid";
 import HW7 from "../../h7/HW7";
+import HW8 from "../../h8/HW8";
 
 
 export function Junior() {
-    const homeworks = [<HW7/>]
+    const homeworks = [<HW7/>, <HW8/>]
 
     return (
         <Container>
